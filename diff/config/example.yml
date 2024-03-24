@@ -1,0 +1,49 @@
+# This repository was forked from https://github.com/openai/guided-diffusion, which is under the MIT license
+
+lr_kernel_n_std: 2
+num_samples: 100
+show_progress: true
+timestep_respacing: '250'
+use_kl: false
+predict_xstart: false
+rescale_timesteps: false
+rescale_learned_sigmas: false
+num_heads_upsample: -1
+channel_mult: ''
+dropout: 0.0
+use_checkpoint: false
+use_new_attention_order: false
+clip_denoised: true
+use_ddim: false
+latex_name: RePaint
+method_name: Repaint
+image_size: 32
+model_path: /root/autodl-tmp/dit/results/011-DiT-B-4/ckpt2_fid/000462000.pt
+name: example
+inpa_inj_sched_prev: true
+n_jobs: 1
+print_estimated_vars: true
+inpa_inj_sched_prev_cumnoise: false
+respace_interpolate: false
+schedule_jump_params:
+  t_T: 250
+  n_sample: 1
+  jump_length: 10
+  jump_n_sample: 10
+data:
+  eval:
+    paper_face_mask:
+      mask_loader: true
+      image_size: 32
+      deterministic: true
+      return_dict: true
+      drop_last: false
+      batch_size: 1
+      return_dataloader: true
+      offset: 0
+      max_len: 4
+      paths:
+        srs: ./log/inpainted
+        lrs: ./log/gt_masked
+        gts: ./log/gt
+        gt_keep_masks: ./log/gt_keep_mask
