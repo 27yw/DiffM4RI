@@ -108,4 +108,4 @@ python  inpaint.py
 ```
 
 ## 🔗 Checkpoint
-checkpoints are available with there links: [Baidu NetDisk Download (pwd:dm4r)](https://pan.baidu.com/s/11VvF0_8rhvq7PYBv5q4enA?pwd=dm4r) and [Google Drive]()
+checkpoints are available with these links: [Baidu NetDisk Download (pwd:dm4r)](https://pan.baidu.com/s/11VvF0_8rhvq7PYBv5q4enA?pwd=dm4r) and [Google Drive]()
