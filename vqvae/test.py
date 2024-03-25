@@ -36,6 +36,7 @@ opt = VQVAEOpt(gpu_ids=gpu_ids, seed=seed)
 device = opt.device
 # initialize SDFusion model
 ckpt_path = '/root/autodl-tmp/vqvae/results/t2.pth'
+path="./data/t2"
 dset="snet"
 opt.init_model_args(ckpt_path)
 opt.init_dset_args(dataset_mode=dset)
@@ -92,7 +93,7 @@ class NiFTIDataset(Dataset):
         # print(nii_data.shape)
         return nii_data, self.file_list[idx]
 # dataset = NiFTIDataset("./data_brats")
-path="./data/t2"
+
 modality = path.split("/")[-1] + "_val"
 dataset = NiFTIDataset(path)
 dataloader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers=4)
