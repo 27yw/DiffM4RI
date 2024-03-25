@@ -61,16 +61,16 @@ With a series of .npy folders, you can place them in a whole folders following s
 ```
 data
  ├── FLAIR
- │ ├── BraTS2021_00621_flair.nii.gz
+ │ ├── BraTS2021_00621.npy
  │ ├── ...
  ├── T1
- │ ├── BraTS2021_00621_t1.nii.gz
+ │ ├── BraTS2021_00621.npy
  │ ├── ...
  ├── T1ce
- │ ├── BraTS2021_00621_t1ce.nii.gz
+ │ ├── BraTS2021_00621.npy
  │ ├── ...
  ├── T2
- │ ├── BraTS2021_00621_t2.nii.gz
+ │ ├── BraTS2021_00621.npy
  │ ├── ...
  ├── ...
 ```
@@ -79,6 +79,13 @@ Run `data_operation.py` to execute the following command in your terminal:
 ```
 cd diff
 python data_operation.py
+```
+After run `data_operation.py`, you will get:
+```
+npy_data
+ ├── BraTS2021_00621.npy
+ ├── BraTS2021_00622.npy
+ ├── ...
 ```
 
 #### 5. **Train diffusion**: 
@@ -101,4 +108,4 @@ python  inpaint.py
 ```
 
 ## 🔗 Checkpoint
-checkpoints are available with their official link: [DiffM4RI]()
+checkpoints are available with this link: [DiffM4RI]()
